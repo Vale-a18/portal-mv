@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="https://img.icons8.com/3d-fluency/94/user-shield.png">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f0f2f5;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="dashboard-container">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2>Admin Panel</h2>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="/dashboard/usuarios/activos">Usuarios Activos</a></li>
+            <li><a href="/dashboard/usuarios/inactivos">Usuarios Inactivos</a></li>
+            <li><a href="/dashboard/roles/activos">Roles Activos</a></li>
+            <li><a href="/dashboard/roles/inactivos">Roles Inactivos</a></li>
+            <li><a href="#" onclick="logout()">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header class="main-header">
+            <h1>Gestión de Roles</h1>
+            <button id="addUserBtn" class="btn-primary">Agregar Rol</button>
+        </header>
+
+        <!-- Create Role Form -->
+        <div class="container">
+            <h1>Create Role</h1>
+            
+            <div class="form-group">
+                <label for="role-name">Name</label>
+                <input type="text" id="role-name" placeholder="Username">
+            </div>
+
+            <div class="form-group">
+                <label>Permissions</label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Permission</th>
+                            <th>All</th>
+                            <th>Index</th>
+                            <th>Create</th>
+                            <th>Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Roles</td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>Users</td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>Product</td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>Category</td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>Attributes</td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>Order</td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>Location</td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>Coupon</td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/rolesactivos.js"></script>
+</body>
+</html>
