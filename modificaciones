@@ -91,74 +91,38 @@
             </div>
 
             <div class="form-group">
-                <label>Permissions</label>
+                <label>Permisos</label> 
                 <table>
                     <thead>
                         <tr>
-                            <th>Permission</th>
-                            <th>All</th>
-                            <th>Index</th>
-                            <th>Create</th>
-                            <th>Edit</th>
+                            <th>Permisos</th> 
+                            <th>Crear</th> 
+                            <th>Actualizar</th> 
+                            <th>Eliminar</th> 
+                            <th>Configuracion</th> 
+                            <th>Administrar usuarios</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Roles</td>
+                            <td>Administrador</td>
+                            <td><input type="checkbox"></td>
                             <td><input type="checkbox"></td>
                             <td><input type="checkbox"></td>
                             <td><input type="checkbox"></td>
                             <td><input type="checkbox"></td>
                         </tr>
+                       
                         <tr>
-                            <td>Users</td>
+                            <td>Usuarios</td>
                             <td><input type="checkbox"></td>
                             <td><input type="checkbox"></td>
                             <td><input type="checkbox"></td>
                             <td><input type="checkbox"></td>
+                             <td><input type="checkbox"></td>
                         </tr>
-                        <tr>
-                            <td>Product</td>
-                            <td><input type="checkbox"></td>
-                            <td><input type="checkbox"></td>
-                            <td><input type="checkbox"></td>
-                            <td><input type="checkbox"></td>
-                        </tr>
-                        <tr>
-                            <td>Category</td>
-                            <td><input type="checkbox"></td>
-                            <td><input type="checkbox"></td>
-                            <td><input type="checkbox"></td>
-                            <td><input type="checkbox"></td>
-                        </tr>
-                        <tr>
-                            <td>Attributes</td>
-                            <td><input type="checkbox"></td>
-                            <td><input type="checkbox"></td>
-                            <td><input type="checkbox"></td>
-                            <td><input type="checkbox"></td>
-                        </tr>
-                        <tr>
-                            <td>Order</td>
-                            <td><input type="checkbox"></td>
-                            <td><input type="checkbox"></td>
-                            <td><input type="checkbox"></td>
-                            <td><input type="checkbox"></td>
-                        </tr>
-                        <tr>
-                            <td>Location</td>
-                            <td><input type="checkbox"></td>
-                            <td><input type="checkbox"></td>
-                            <td><input type="checkbox"></td>
-                            <td><input type="checkbox"></td>
-                        </tr>
-                        <tr>
-                            <td>Coupon</td>
-                            <td><input type="checkbox"></td>
-                            <td><input type="checkbox"></td>
-                            <td><input type="checkbox"></td>
-                            <td><input type="checkbox"></td>
-                        </tr>
+                  
+                       
                     </tbody>
                 </table>
             </div>
