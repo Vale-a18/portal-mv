@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="https://img.icons8.com/3d-fluency/94/user-shield.png">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>Admin Panel</h2>
+            </div>
+            <ul class="sidebar-menu">
+				<li><a href="/dashboard/usuarios/activos">Usuarios Activos</a></li>
+				<li><a href="/dashboard/usuarios/inactivos">Usuarios Inactivos</a></li>
+				<li><a href="/dashboard/roles/activos">Roles Activos</a></li>
+				<li><a href="/dashboard/roles/inactivos">Roles Inactivos</a></li>
+				<li><a href="#" onclick="logout()">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header class="main-header">
+                <h1>Gestión de Roles</h1>
+                <button id="addUserBtn" class="btn-primary">Agregar Rol</button>
+            </header>
+
+            <!-- User Table -->
+            <section class="user-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripcion</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTableBody">
+                        <!-- Data de usuarios será insertada aquí dinámicamente -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+
+    <!-- Modal para agregar usuarios -->
+    <div id="addUserModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('addUserModal')">&times;</span>
+            <h2>Agregar Rol</h2>
+            <form id="addUserForm">
+                <div class="form-group">
+                    <label for="addName">Nombre</label>
+                    <input type="text" id="addName" required>
+                </div>
+                <div class="form-group">
+                    <label for="addLastname">Descripcion</label>
+                    <input type="text" id="addLastname" required>
+                </div>
+                <div class="form-group">
+                    <label for="addRole">Estado</label>
+                    <select id="addRole" required>
+                        <option value="1">Activo</option>
+                        <option value="2">Inactivo</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">Guardar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para editar usuarios -->
+    <div id="editUserModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('editUserModal')">&times;</span>
+            <h2>Editar Usuario</h2>
+            <form id="editUserForm">
+                <div class="form-group">
+                    <label for="editName">Nombre</label>
+                    <input type="text" id="editName" required>
+                </div>
+                <div class="form-group">
+                    <label for="editLastname">Descripcion</label>
+                    <input type="text" id="editLastname" required>
+                </div>
+				<div class="form-group">
+                    <label for="addRole">Estado</label>
+                    <select id="editaddRole" required>
+                        <option value="1">Activo</option>
+                        <option value="2">Inactivo</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">Guardar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/rolesactivos.js"></script>
+</body>
+</html>
